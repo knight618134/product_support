@@ -25,22 +25,40 @@ const Header = () => {
     changeLanguage(selectedLanguage, originalPath);
   };
 
+  const langOption = [
+    {
+      label: "English",
+      value: "en",
+    },
+    {
+      label: "日本語",
+      value: "ja",
+    },
+  ];
+
   return (
     <header className="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-[#00b0b9] dark:bg-[#1a202c] shadow-md z-10">
-      <h1>
-        <Link to="/" style={{ color: `white`, textDecoration: `none` }}>
-          Home
-        </Link>
-      </h1>
+      <Link to="/" style={{ display: "inline-block" }}>
+        <img
+          src="/img/header_logo.png"
+          alt="header_logo"
+          style={{ maxWidth: "100%", height: "auto" }}
+        />
+      </Link>
+
       <div className="flex items-center">
         <select
           onChange={handleChange}
           value={language}
-          className="mr-4 p-2 bg-white dark:bg-gray-700 text-black dark:text-white border rounded"
+          className="block w-full px-4 py-2 mt-2 text-base text-gray-700  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent mr-4 p-2 bg-white dark:bg-gray-700  dark:text-white"
         >
           {languages.map((lng) => (
-            <option key={lng} value={lng}>
-              {lng}
+            <option
+              key={lng}
+              value={lng}
+              className="text-base text-gray-700 bg-white dark:bg-gray-700 dark:text-white"
+            >
+              {langOption.find((item) => item.value === lng)?.label || ""}
             </option>
           ))}
         </select>

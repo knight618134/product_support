@@ -4,6 +4,7 @@
 
 body {
   @apply transition-colors duration-300;
+  overflow-x: hidden;
 }
 
 @layer base {

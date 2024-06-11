@@ -1,7 +1,16 @@
 {
-  "Welcome to my Gatsby site!": "Welcome to my Gatsby site!",
-  "My name is Shanika": "My name is Shanika",
-  "My profession is SSE": "My profession is SSE",
   "name": "Name",
-  "download": "Download"
+  "download": "Download",
+  "total_solution": "5G Total Solution",
+  "solution_desc_1": "Provide the best solution for 5G small cell and network management systems",
+  "solution_desc_2": " to meet 5G application scenarios.",
+  "find_more": "Find More",
+  "download_center": "Download Center",
+  "product_documents_here": "You can download all 5G related product documents here.",
+  "select_product_model": "Please Select your Product and Model",
+  "version": "Version",
+  "document": "Document",
+  "date": "Date",
+  "need_more_help": "Need More Help?",
+  "please_contact_us": "Please Contact Us"
 }

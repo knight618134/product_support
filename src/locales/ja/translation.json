@@ -1,7 +1,16 @@
 {
-  "Welcome to my Gatsby site!": "私のGatsbyサイトへようこそ！",
-  "My name is Shanika": "私の名前はシャニカです",
-  "My profession is SSE": "私の職業はSSEです",
   "name": "名前",
-  "download": "ダウンロード"
+  "download": "ダウンロード",
+  "total_solution": "5Gトータルソリューション",
+  "solution_desc_1": "5Gスモールセルとネットワーク管理システムのための最適なソリューションを提供します",
+  "solution_desc_2": "5Gアプリケーションシナリオに対応します。",
+  "find_more": "もっと見る",
+  "download_center": "ダウンロードセンター",
+  "product_documents_here": "ここで5G関連の製品ドキュメントをすべてダウンロードできます。",
+  "select_product_model": "製品とモデルを選択してください",
+  "version": "バージョン",
+  "document": "ドキュメント",
+  "date": "日付",
+  "need_more_help": "もっと助けが必要ですか？",
+  "please_contact_us": "お問い合わせください"
 }
