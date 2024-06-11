@@ -1,13 +1,12 @@
 import React, { useState, useEffect } from "react";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { Link, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 import { langOption } from "../utils/data";
+import "../styles/global.css"; // 確保這裡引用了全局 CSS 文件
 
 const Header = () => {
   const { languages, originalPath, changeLanguage, language } = useI18next();
   const [darkMode, setDarkMode] = useState(false);
-
+  const { t } = useTranslation();
   useEffect(() => {
     const isDarkMode = localStorage.getItem("darkMode") === "true";
     setDarkMode(isDarkMode);
@@ -17,19 +16,19 @@ const Header = () => {
   const handleThemeToggle = () => {
     const newDarkMode = !darkMode;
     setDarkMode(newDarkMode);
-    localStorage.setItem("darkMode", newDarkMode);
+    localStorage.setItem("darkMode", newDarkMode.toString());
     document.documentElement.classList.toggle("dark", newDarkMode);
   };
 
-  const handleChange = (event) => {
+  const handleChange = (event: any) => {
     const selectedLanguage = event.target.value;
     changeLanguage(selectedLanguage, originalPath);
   };
 
-  const handleScrollTo = (id) => {
+  const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      const headerOffset = document.querySelector("header").offsetHeight;
+      const headerOffset = document.querySelector("header")?.offsetHeight || 0;
       const elementPosition = element.getBoundingClientRect().top;
       const offsetPosition =
         elementPosition + window.pageYOffset - headerOffset;
@@ -54,21 +53,21 @@ const Header = () => {
         <nav className="flex items-center ml-10 space-x-16">
           <span
             onClick={() => handleScrollTo("product")}
-            className="text-white hover:cursor-pointer"
+            className="text-white hover:cursor-pointer underline-animation"
           >
-            Product
+            {t("product")}
           </span>
           <span
             onClick={() => handleScrollTo("support")}
-            className="text-white hover:cursor-pointer"
+            className="text-white hover:cursor-pointer underline-animation"
           >
-            Support
+            {t("support")}
           </span>
           <span
             onClick={() => handleScrollTo("contact")}
-            className="text-white hover:cursor-pointer"
+            className="text-white hover:cursor-pointer underline-animation"
           >
-            Contact Us
+            {t("contact_us")}
           </span>
         </nav>
       </div>
@@ -88,13 +87,13 @@ const Header = () => {
             </option>
           ))}
         </select>
-        <button onClick={handleThemeToggle} className="p-2">
+        {/* <button onClick={handleThemeToggle} className="p-2">
           {darkMode ? (
             <FontAwesomeIcon icon={faSun} className="text-white" />
           ) : (
             <FontAwesomeIcon icon={faMoon} className="text-white" />
           )}
-        </button>
+        </button> */}
       </div>
     </header>
   );

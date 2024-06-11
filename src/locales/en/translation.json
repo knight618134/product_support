@@ -12,5 +12,8 @@
   "document": "Document",
   "date": "Date",
   "need_more_help": "Need More Help?",
-  "please_contact_us": "Please Contact Us"
+  "please_contact_us": "Please Contact Us",
+  "product": "Product",
+  "support": "Support",
+  "contact_us": "Contact Us"
 }
