@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useI18next } from "gatsby-plugin-react-i18next";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+import { langOption } from "../utils/data";
 
 const Header = () => {
   const { languages, originalPath, changeLanguage, language } = useI18next();
@@ -25,27 +26,52 @@ const Header = () => {
     changeLanguage(selectedLanguage, originalPath);
   };
 
-  const langOption = [
-    {
-      label: "English",
-      value: "en",
-    },
-    {
-      label: "日本語",
-      value: "ja",
-    },
-  ];
+  const handleScrollTo = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      const headerOffset = document.querySelector("header").offsetHeight;
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition =
+        elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: "smooth",
+      });
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-[#00b0b9] dark:bg-[#1a202c] shadow-md z-10">
-      <Link to="/">
-        <img
-          src="/img/header_logo.png"
-          alt="header_logo"
-          className="h-8 sm:h-10"
-        />
-      </Link>
-
+      <div className="flex">
+        <Link to="/" className="mr-16">
+          <img
+            src="/img/header_logo.png"
+            alt="header_logo"
+            className="h-8 sm:h-10"
+          />
+        </Link>
+        <nav className="flex items-center ml-10 space-x-16">
+          <span
+            onClick={() => handleScrollTo("product")}
+            className="text-white hover:cursor-pointer"
+          >
+            Product
+          </span>
+          <span
+            onClick={() => handleScrollTo("support")}
+            className="text-white hover:cursor-pointer"
+          >
+            Support
+          </span>
+          <span
+            onClick={() => handleScrollTo("contact")}
+            className="text-white hover:cursor-pointer"
+          >
+            Contact Us
+          </span>
+        </nav>
+      </div>
       <div className="flex items-center">
         <select
           onChange={handleChange}

@@ -99,3 +99,14 @@ export const releaseData = [
     fileName: "LINE BOT_V4",
   },
 ];
+
+export const langOption = [
+  {
+    label: "English",
+    value: "en",
+  },
+  {
+    label: "日本語",
+    value: "ja",
+  },
+];

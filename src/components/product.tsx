@@ -39,10 +39,10 @@ export default function Product({
       <p className="text-[32px] sm:text-[40px] my-2 font-bold">
         {t("download_center")}
       </p>
-      <p className="text-[16px] sm:text-[20px] mb-16">
+      <p className="text-[16px] sm:text-[18px] mb-16">
         {t("product_documents_here")}
       </p>
-      <p className="text-[16px] sm:text-[20px] my-2">
+      <p className="text-[16px] sm:text-[18px] my-2">
         {t("select_product_model")}
       </p>
 

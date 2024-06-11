@@ -6,12 +6,10 @@ import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
 export default function Help() {
   const { t } = useTranslation();
   return (
-    <div className="relative w-full h-[511px] sm:h-[600px]">
+    <div className="relative w-full h-[435px] sm:h-[500px]" id="contact">
       <div
         style={{
           backgroundImage: "url(/img/help_center.png)",
-          backgroundColor: "rgba(0, 0, 0, 0.6)",
-          backgroundBlendMode: "multiply",
         }}
         className="bg-cover h-full bg-no-repeat bg-center"
       ></div>

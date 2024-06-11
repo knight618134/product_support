@@ -24,23 +24,19 @@ const IndexPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-full flex flex-col bg-white dark:bg-[#1a202c]">
+    <main className="min-h-screen w-full flex flex-col bg-white dark:bg-[#1a202c]">
       <Header />
       <TotalSolution />
-
-      <main className="w-full flex flex-col px-4 sm:px-12 my-12">
-        <div className="w-full">
-          <Product fetchFwData={fetchFwData} />
-          {firmwareData.length > 0 &&
-            firmwareData.map((item: ReleaseDataType, index: number) => (
-              <Card key={item.index} payload={item} index={index} />
-            ))}
-        </div>
-      </main>
-
+      <div className="w-full flex flex-col px-4 sm:px-12 my-12" id="support">
+        <Product fetchFwData={fetchFwData} />
+        {firmwareData.length > 0 &&
+          firmwareData.map((item: ReleaseDataType, index: number) => (
+            <Card key={item.index} payload={item} index={index} />
+          ))}
+      </div>
       <Help />
       <Footer />
-    </div>
+    </main>
   );
 };
 

@@ -24,7 +24,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faFacebook}
-            className="text-blue-600 text-xl"
+            className="text-gray-500 text-xl"
           />
         </a>
         <a
@@ -33,7 +33,7 @@ const Footer = () => {
           rel="noopener noreferrer"
           className="ml-2"
         >
-          <FontAwesomeIcon icon={faYoutube} className="text-red-600 text-xl" />
+          <FontAwesomeIcon icon={faYoutube} className="text-gray-500 text-xl" />
         </a>
         <a
           href="https://www.linkedin.com/company/liteon?originalSubdomain=tw"
@@ -43,7 +43,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faLinkedin}
-            className="text-blue-600 text-xl"
+            className="text-gray-500 text-xl"
           />
         </a>
         <span className="ml-3 text-center sm:text-left">

@@ -23,11 +23,11 @@ export default function Card({
   return (
     <div
       key={payload.index}
-      className="mt-3 bg-[#CFEAEC] w-full flex flex-col sm:flex-row justify-between px-8 items-center py-4"
+      className="mt-5 bg-[#CFEAEC] w-full flex flex-col sm:flex-row justify-between px-8 items-center py-4"
     >
       <div>
         <div className="flex items-center">
-          <span className="text-[24px] sm:text-[32px] font-bold mr-5">
+          <span className="text-[18px] sm:text-[22px] font-bold mr-5">
             {t("document") + (index + 1)}
           </span>
           <span className="text-[14px] sm:text-[16px] text-[#00b0b9]">

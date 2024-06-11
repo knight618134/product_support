@@ -1,10 +1,16 @@
 import React from "react";
-import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
+import { Trans, useI18next, useTranslation } from "gatsby-plugin-react-i18next";
 
 export default function TotalSolution() {
+  const { languages, originalPath, changeLanguage, language } = useI18next();
   const { t } = useTranslation();
+  const handleProductClick = () => {
+    console.log(language, "language");
+    const lang = language === "ja" ? "ja" : "en-us";
+    window.open(`https://www.liteon.com/${lang}/product/714`, "_blank");
+  };
   return (
-    <div className="relative w-full h-[511px] sm:h-[600px]">
+    <div id="product" className="relative w-full h-[511px] sm:h-[600px]">
       <div
         style={{
           backgroundImage: "url(/img/solution.png)",
@@ -24,7 +30,10 @@ export default function TotalSolution() {
         <p className="text-white text-lg mt-5 font-bold">
           <Trans>{t("solution_desc_2")}</Trans>
         </p>
-        <button className="bg-[#00b0b9] p-2 px-5 mt-16 text-white">
+        <button
+          onClick={handleProductClick}
+          className="bg-[#00b0b9] p-2 px-5 mt-16 text-white"
+        >
           {t("find_more")}
         </button>
       </div>
