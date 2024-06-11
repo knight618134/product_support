@@ -36,12 +36,18 @@ export default function Product({
 
   return (
     <div className="w-full">
-      <p className="text-[40px] my-2 font-bold">{t("download_center")}</p>
-      <p className="text-[20px] mb-16">{t("product_documents_here")}</p>
-      <p className="text-[20px] my-2 ">{t("select_product_model")}</p>
+      <p className="text-[32px] sm:text-[40px] my-2 font-bold">
+        {t("download_center")}
+      </p>
+      <p className="text-[16px] sm:text-[20px] mb-16">
+        {t("product_documents_here")}
+      </p>
+      <p className="text-[16px] sm:text-[20px] my-2">
+        {t("select_product_model")}
+      </p>
 
       <select
-        className="w-1/5 px-4 py-2 mt-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent"
+        className="w-full sm:w-1/5 px-4 py-2 mt-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent"
         value={comtype}
         onChange={handleComtypeChange}
       >
@@ -57,7 +63,7 @@ export default function Product({
       </select>
 
       <select
-        className="w-1/5 px-4 py-2 mt-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent ml-5"
+        className="w-full sm:w-1/5 px-4 py-2 mt-2 text-base text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent ml-0 sm:ml-5"
         value={deviceModel}
         onChange={handleModelChange}
       >

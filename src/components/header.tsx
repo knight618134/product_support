@@ -38,11 +38,11 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-[#00b0b9] dark:bg-[#1a202c] shadow-md z-10">
-      <Link to="/" style={{ display: "inline-block" }}>
+      <Link to="/">
         <img
           src="/img/header_logo.png"
           alt="header_logo"
-          style={{ maxWidth: "100%", height: "auto" }}
+          className="h-8 sm:h-10"
         />
       </Link>
 
@@ -50,7 +50,7 @@ const Header = () => {
         <select
           onChange={handleChange}
           value={language}
-          className="block w-full px-4 py-2 mt-2 text-base text-gray-700  border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent mr-4 p-2 bg-white dark:bg-gray-700  dark:text-white"
+          className="block w-full px-4 py-2 mt-2 text-base text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#00b0b9] focus:border-transparent mr-4 p-2 bg-white dark:bg-gray-700 dark:text-white"
         >
           {languages.map((lng) => (
             <option

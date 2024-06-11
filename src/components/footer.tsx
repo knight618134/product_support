@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { Link, useI18next } from "gatsby-plugin-react-i18next";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faYoutube,
   faLinkedin,
   faFacebook,
 } from "@fortawesome/free-brands-svg-icons";
+
 const Footer = () => {
   return (
-    <footer className="w-full flex justify-between items-center p-5 bg-[#EAEAEA] dark:bg-[#1a202c] shadow-md z-10">
+    <footer className="w-full flex flex-col sm:flex-row justify-between items-center p-5 bg-[#EAEAEA] dark:bg-[#1a202c] shadow-md z-10">
       <img
         src="/img/footer_logo.png"
         alt="footer_logo"
-        style={{ maxWidth: "100%", height: "auto", display: "inline-block" }}
+        className="h-8 sm:h-10 mb-4 sm:mb-0"
       />
 
       <div className="flex items-center">
@@ -46,7 +46,7 @@ const Footer = () => {
             className="text-blue-600 text-xl"
           />
         </a>
-        <span className="ml-3">
+        <span className="ml-3 text-center sm:text-left">
           ©LITE-ON Technology Corporation. All Rights Reserved.
         </span>
       </div>

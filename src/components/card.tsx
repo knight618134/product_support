@@ -23,21 +23,23 @@ export default function Card({
   return (
     <div
       key={payload.index}
-      className="mt-3 bg-[#CFEAEC] w-full flex justify-between px-8 items-center py-4"
+      className="mt-3 bg-[#CFEAEC] w-full flex flex-col sm:flex-row justify-between px-8 items-center py-4"
     >
       <div>
         <div className="flex items-center">
-          <span className="text-[32px] font-bold mr-5">
+          <span className="text-[24px] sm:text-[32px] font-bold mr-5">
             {t("document") + (index + 1)}
           </span>
-          <span className="text-[16px] text-[#00b0b9]">
+          <span className="text-[14px] sm:text-[16px] text-[#00b0b9]">
             {t("version") + ": " + payload.version}
           </span>
         </div>
-        <p className="text-[16px] ">{payload.desc}</p>
-        <p className="text-[16px] ">{t("date") + ": " + payload.date}</p>
+        <p className="text-[14px] sm:text-[16px]">{payload.desc}</p>
+        <p className="text-[14px] sm:text-[16px]">
+          {t("date") + ": " + payload.date}
+        </p>
       </div>
-      <div>
+      <div className="mt-4 sm:mt-0">
         <button
           onClick={() =>
             payload.fileName ? downloadPDF(payload.fileName) : undefined

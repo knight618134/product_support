@@ -24,12 +24,12 @@ const IndexPage = () => {
   };
 
   return (
-    <div className="min-h-screen w-[100vw] flex flex-col bg-white dark:bg-[#1a202c]">
+    <div className="min-h-screen w-full flex flex-col bg-white dark:bg-[#1a202c]">
       <Header />
       <TotalSolution />
 
-      <main className="w-full flex  px-12 my-12">
-        <div className=" w-[100%]">
+      <main className="w-full flex flex-col px-4 sm:px-12 my-12">
+        <div className="w-full">
           <Product fetchFwData={fetchFwData} />
           {firmwareData.length > 0 &&
             firmwareData.map((item: ReleaseDataType, index: number) => (

@@ -4,18 +4,18 @@ import { Trans, useTranslation } from "gatsby-plugin-react-i18next";
 export default function TotalSolution() {
   const { t } = useTranslation();
   return (
-    <div className="relative w-full h-[511px]">
+    <div className="relative w-full h-[511px] sm:h-[600px]">
       <div
         style={{
           backgroundImage: "url(/img/solution.png)",
           backgroundColor: "rgba(0, 0, 0, 0.6)",
           backgroundBlendMode: "multiply",
         }}
-        className="bg-cover h-full bg-no-repeat bg-center  "
+        className="bg-cover h-full bg-no-repeat bg-center"
       ></div>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center  ">
-        <h1 className="text-white text-4xl font-bold">
+      <div className="absolute top-[60%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
+        <h1 className="text-white text-2xl sm:text-4xl font-bold">
           <Trans>{t("total_solution")}</Trans>
         </h1>
         <p className="text-white text-lg mt-5 font-bold">
