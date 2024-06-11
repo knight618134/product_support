@@ -6,11 +6,15 @@ export default function TotalSolution() {
   return (
     <div className="relative w-full h-[511px]">
       <div
-        style={{ backgroundImage: "url(/img/solution.png)" }}
-        className="bg-cover  h-full bg-no-repeat bg-center opacity-80"
+        style={{
+          backgroundImage: "url(/img/solution.png)",
+          backgroundColor: "rgba(0, 0, 0, 0.6)",
+          backgroundBlendMode: "multiply",
+        }}
+        className="bg-cover h-full bg-no-repeat bg-center  "
       ></div>
 
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full text-center  ">
         <h1 className="text-white text-4xl font-bold">
           <Trans>{t("total_solution")}</Trans>
         </h1>
