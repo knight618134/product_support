@@ -42,13 +42,13 @@ const Header = () => {
   };
 
   return (
-    <header className="fixed top-0 left-0 w-full flex justify-between items-center p-5 bg-[#00b0b9] dark:bg-[#1a202c] shadow-md z-10">
+    <header className="fixed top-0 left-0 w-full flex justify-between items-center p-3 bg-[#00b0b9] dark:bg-[#1a202c] shadow-md z-10">
       <div className="flex">
         <Link to="/" className="mr-16">
           <img
             src="/img/header_logo.png"
             alt="header_logo"
-            className="h-8 sm:h-10"
+            className="h-6 sm:h-8"
           />
         </Link>
         <nav className="flex items-center ml-10 space-x-16">
