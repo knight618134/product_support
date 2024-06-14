@@ -3,7 +3,7 @@ import type { GatsbyConfig } from "gatsby";
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `litenetics_support`,
-    siteUrl: `https://www.yourdomain.tld`,
+    siteUrl: `https://5g.liteon.com:8083`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
@@ -45,31 +45,40 @@ const config: GatsbyConfig = {
         name: `locale`,
       },
     },
+    // {
+    //   resolve: `gatsby-plugin-react-i18next`,
+    //   options: {
+    //     localeJsonSourceName: `locale`,
+    //     languages: [`en`, `ja`],
+    //     defaultLanguage: `en`,
+    //     siteUrl: `http://localhost:8000/`,
+    //     i18nextOptions: {
+    //       interpolation: {
+    //         escapeValue: false,
+    //       },
+    //       keySeparator: false,
+    //       nsSeparator: false,
+    //     },
+    //     pages: [
+    //       {
+    //         matchPath: "/:lang?/blog/:uid",
+    //         getLanguageFromPath: true,
+    //         excludeLanguages: ["es"],
+    //       },
+    //       {
+    //         matchPath: "/preview",
+    //         languages: ["en"],
+    //       },
+    //     ],
+    //   },
+    // },
     {
       resolve: `gatsby-plugin-react-i18next`,
       options: {
-        localeJsonSourceName: `locale`,
-        languages: [`en`, `ja`],
+        localeJsonSourceName: `locales`,
         defaultLanguage: `en`,
-        siteUrl: `http://localhost:8000/`,
-        i18nextOptions: {
-          interpolation: {
-            escapeValue: false,
-          },
-          keySeparator: false,
-          nsSeparator: false,
-        },
-        pages: [
-          {
-            matchPath: "/:lang?/blog/:uid",
-            getLanguageFromPath: true,
-            excludeLanguages: ["es"],
-          },
-          {
-            matchPath: "/preview",
-            languages: ["en"],
-          },
-        ],
+        languages: [`en`],
+        // 其他必要配置
       },
     },
   ],

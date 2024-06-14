@@ -49,6 +49,23 @@ export const componentTypeOptions = [
   // },
 ];
 
+export const maggieData = [
+  {
+    index: 1,
+    version: "v01.02.06a",
+    desc: "Product Document Version 1.0",
+    date: "2023-04-01",
+    fileName: "LINE BOT_V4",
+  },
+  {
+    index: 2,
+    version: "v01.02.06a",
+    desc: "Product Document Version 1.0",
+    date: "2023-04-01",
+    fileName: "LINE BOT_V4",
+  },
+];
+
 export const releaseData = [
   {
     modelName: "FF-GDI079E4",

@@ -28,15 +28,15 @@ export default function Card({
       <div>
         <div className="flex items-center">
           <span className="text-[18px] sm:text-[22px] font-bold mr-5">
-            {t("document") + (index + 1)}
+            {t("Document") + (index + 1)}
           </span>
           <span className="text-[14px] sm:text-[16px] text-[#00b0b9]">
-            {t("version") + ": " + payload.version}
+            {t("Version") + ": " + payload.version}
           </span>
         </div>
         <p className="text-[14px] sm:text-[16px]">{payload.desc}</p>
         <p className="text-[14px] sm:text-[16px]">
-          {t("date") + ": " + payload.date}
+          {t("Date") + ": " + payload.date}
         </p>
       </div>
       <div className="mt-4 sm:mt-0">
@@ -46,7 +46,7 @@ export default function Card({
           }
           className="bg-[#00b0b9] p-2 px-5 text-white"
         >
-          {t("download")}
+          {t("Download")}
         </button>
       </div>
     </div>
